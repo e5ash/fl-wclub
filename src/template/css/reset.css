@@ -2,17 +2,15 @@
   padding: 0;
   margin: 0;
   border: 0;
+  transition: 1s;
   box-sizing: border-box;
-}
-
-html, body {
-  min-height: 100vh;
+  cursor: default;
 }
 
 body {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  color: #121212;
+  font-size: 14px;
+  font-family: "HelveticaNeueCyr", sans-serif;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -37,10 +35,11 @@ li {
 }
 
 a {
-  color: #000000;
+  color: #121212;
   text-decoration: none;
   outline: none;
   transition: 0.3s;
+  cursor: pointer;
   border-bottom: 1px solid transparent;
 }
 

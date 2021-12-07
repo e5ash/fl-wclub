@@ -1,10 +1,200 @@
 extends ../../templates/default
 block vars
 	-
-		title = "Главная страница"
+		title = "INFINITY - Клуб успешных женщин"
 		breadcrumbs = [
 			['Главная', 'index.html'],
 			[title]
 		]
 block content
-	
+	.intro
+		.case
+			.intro__wrap.row
+				.intro__content
+					.intro__title.h1 #[span.t Клуб] #[span.t успешных] #[span.t женщ#[u ин]]
+					.intro__text.t1.t Мы объединяем женщин  для достижения успеха. Основная задача клуба - сделать Вас счастливыми!
+				.intro__img.img
+					img(src="uploads/pic-1.jpg" alt="")
+				.intro__round-text.r-text
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<circle cx="50%" cy="50%" r="70" id="intro-round" fill="none"/>
+							<text>
+								<textPath href="#intro-round" xlink:href="#intro-round" startOffset="0%">Присоединйся к нам!</textPath>
+							</text>
+						</svg>
+
+	.lose
+		.case
+			.lose__wrap
+				.lose__img.img
+					img(src="uploads/pic-2.jpg" alt="")
+				.lose__title.h2.t Что ты потеряешь, <br>#[u ес]ли не станешь членом клуба?
+
+	.services
+		.services__list
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Консьерж <br>сервис
+								.service__text.t1.t
+									p Вам нужно что-либо? Сервис? Товар? Вас бросил любимый, хотите заказать киллера? Просто напишите в поддержку и получите ответ.
+								.service__desc.h3.t.--mt Мы решим ваши проблемы со стиркой, уборкой, глажкой, кухней и т. д., освобождая время для жизни участницам.
+							.service__img.img
+								img(src="uploads/service-1.jpg" alt="")
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Шоппинг
+								.service__text.t2.t
+									p Пришло время сменить гардероб? В этом разделе ты узнаешь, сколько на самом деле стоят знаменитые итальянские бренды и как не переплачивать за них в десятки раз.
+									p Мы просто уверены, после этого ты забудешь про китайский ширпотреб и будешь одеваться  как богиня, все будут просто в шоке от того как ты можешь себе это позволить?
+								.service__desc.h3.t.--mt Товары из США <br>и Италии.  Совместные покупки.  Обучение покупкам.
+							.service__img.img
+								img(src="uploads/service-2.jpg" alt="")
+			.services__item.service
+				.service__inner.--reverse
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t.--maxw Тело
+								.service__text.t2.t
+									p Похудение, спортивные рецепты, диета и т. д.  После прохождения этого раздела Ваши подруги будут шокированы, а Ваш мужчина бросит всех своих любовниц и просто не отпустит вас ни на минуту. Мы купили самые дорогие курсы по похудению от самых именитых авторов и открыли бесплатный доступ к ним для членов нашего клуба. 
+								.service__desc.h3.t.--mt Профессиональный диетолог, который доведет Вас до совершенства.
+							.service__img.img
+								img(src="uploads/service-3.jpg" alt="")
+	.services.--other
+		.services__list
+			.services__item.service
+				.service__inner.--reverse
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Мужчины
+								.service__text.t2.t
+									p Вы еще одиноки? Или этот негодяй оставил Вас с ребенком?  Не переживайте, в мире есть множество мест, где женщин просто боготворят, а наличие детей - это преимущество, а не недостаток, как считают некоторые из наших мужчин.
+									p Детальная инструкция как сделать так, чтобы мультимиллионер или миллиардер пригласил вас на встречу.
+								.service__desc.h3.t.--mt Доступ к базе данных самых успешных мужчин планеты, которых нет в свободном доступе.
+							.service__img.img
+								img(src="uploads/service-4.jpg" alt="")
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Бизнес
+								.service__text.t2.t
+									p Курсы, обучение, консультации - здесь мы подготовили методы, которые позволят тебе зарабатывать в любой точке планеты, и стать независимой ни от кого.
+								.service__desc.h3.t.--mt МЫ СИЛОЙ ЗАСТАВЛЯЕМ ЧЛЕНОВ КЛУБА СТАНОВИТЬСЯ БОГАТЫМИ!
+							.service__img.img
+								img(src="uploads/service-5.jpg" alt="")
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Эзотерика
+								.service__text.t2.t
+									p В этой области столько шарлатанов, что очень сложно не разочароваться. Мы отбираем лучших и добавляем в нашу базу, по отзывам участниц.
+								.service__desc.h3.t.--mt Гадалки, гороскопы, привороты - проверенные специалисты из мира магии
+							.service__img.img
+								img(src="uploads/service-6.jpg" alt="")
+			.services__item.service
+				.service__inner.--reverse
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Образование
+								.service__text.t2.t
+									p Мы подобрали для Вас курсы по английскому языку, а также расскажем Вам, как можно практиковаться с носителями языка, абсолютно бесплатно.
+								.service__desc.h3.t.--mt Никто же не будет спорить, что без английского сейчас никуда?
+							.service__img.img
+								img(src="uploads/service-7.jpg" alt="")
+			.services__item.service
+				.service__inner.--reverse
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Консультации
+								.service__text.t2.t
+									p Психолога:  нам часто нужно попросить у кого-то совет и найти правильное решение в жизни, совет хорошего психолога просто бесценен, ему можно и поплакаться в жилетку, он может вывести  из серьезной депрессии.
+									p Юриста: как часто нам нужна помощь юриста? Например, разводишься? Получи максимум из того, что тебе положено!
+									p Врача: понадобилась помощь? Мы найдем для Вас лучшего врача по Вашей проблеме.
+							.service__img.img
+								img(src="uploads/service-8.jpg" alt="")
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Развлечения <br>и отдых
+								.service__text.t2.t
+									p Доступ на закрытые вечеринки, скидки на лучших курортах, куда не пускают простых смертных.
+							.service__img.img
+								img(src="uploads/service-9.jpg" alt="")
+			.services__item.service
+				.service__inner
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Дисконтный <br>клуб
+								.service__text.t2.t
+									p Ну кто же не любит скидки? Став членом клуба, ты получишь дисконтную VIP-карту, которая дает скидки в самых престижных заведениях твоего города. Мы планируем расширить ее действие на всю планету. Стань одной из первых ее владелиц.
+								.service__desc.h3.t.--mt Так же члены дисконтного клуба регулярно получают купоны, подарки и пробники от наших партнеров.
+							.service__img.img
+								img(src="uploads/service-9.jpg" alt="")
+			.services__item.service
+				.service__inner.--reverse
+					.case
+						.service__wrap
+							.service__content
+								.service__title.h2.t Медитации
+								.service__text.t2.t
+									p Хочешь быть спокойной, уверенной в себе женщиной и понять, что ты хочешь от жизни? Этот раздел создан именно для этого. Лучшие медитации, которые помогут Вам найти свой путь и стать самой счастливой.
+							.service__img.img
+								img(src="uploads/service-10.jpg" alt="")
+		.services__more-wrap
+			.services__more.btn.--bg-black.--md.--round
+				.btn__inner Смотреть еще
+				.btn__shape
+				.btn__shape
+
+	.club-name
+		.club-name__title.h0.t ЗАКРЫТЫЙ КЛУБ
+
+	.invite
+		.case
+			.invite__wrap
+				.invite__content
+					.invite__title.h2.t У нас закрытый клуб и стать членом клуба можно только по приглашению. 
+					.invite__text.t2.t INFINITY обозначает  «бесконечность», «безграничность» или даже «беспредельность». Это полностью описывает наших участниц. Девушек, бесконечно счастливых, успешных и живущих по своим правилам.
+				.invite__img.img
+					img(src="uploads/pic-3.jpg" alt="")
+
+	.about
+		.case
+			.about__title.h2.t Мы тщательно отбираем кандидаток, так как дорожим своей репутацией.
+			.about__list
+				.about__item
+					.about__inner
+						.about__text.t Членский взнос 50 евро, что равняется всего 2-м чашкам кофе в месяц. Если клуб не даст Вам в 10 раз больше стоимости взноса, мы вернем Вам деньги через год без всяких условий.
+					.about__shape
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<circle cx="50%" cy="50%" r="220" id="about-shape-1" fill="none"/>
+							<text>
+								<textPath xlink xlink:about-shape-1:href="#about-shape-1" startOffset="0%">Членский взнос 50 евро в год</textPath>
+							</text>
+						</svg>
+				.about__item
+					.about__inner
+						.about__text.t Как вы знаете, мы равняемся 5 членам из нашего окружения. Если 5 Ваших близких людей нищие, Вы станете шестым,  если 5 ваших друзей миллионеры, то Вы последуете их примеру.
+					.about__shape
+						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+							<circle cx="50%" cy="50%" r="220" id="about-shape-2" fill="none"/>
+							<text>
+								<textPath xlink xlink:about-shape-2:href="#about-shape-2" startOffset="0%">Средний доход участниц клуба 5 тыс. евро</textPath>
+							</text>
+						</svg>

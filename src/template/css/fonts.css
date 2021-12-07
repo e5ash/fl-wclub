@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.eot");
+  src: local("HelveticaNeueCyr-Roman"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.eot");
+  src: local("HelveticaNeueCyr-Medium"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeue/HelveticaNeueCyr-Black.eot");
+  src: local("HelveticaNeueCyr-Black"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Black.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeueCyr-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lovelace";
+  src: url("../fonts/Lovelace/Lovelace-Regular.eot");
+  src: local("Lovelace Regular"), local("Lovelace-Regular"), url("../fonts/Lovelace/Lovelace-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lovelace/Lovelace-Regular.woff2") format("woff2"), url("../fonts/Lovelace/Lovelace-Regular.woff") format("woff"), url("../fonts/Lovelace/Lovelace-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lovelace";
+  src: url("../fonts/Lovelace/Lovelace-Medium.eot");
+  src: local("Lovelace Medium"), local("Lovelace-Medium"), url("../fonts/Lovelace/Lovelace-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lovelace/Lovelace-Medium.woff2") format("woff2"), url("../fonts/Lovelace/Lovelace-Medium.woff") format("woff"), url("../fonts/Lovelace/Lovelace-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
