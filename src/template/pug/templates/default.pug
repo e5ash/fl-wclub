@@ -6,18 +6,12 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title=title
-	body
-		.wrap
-			link(rel="stylesheet" href="template/css/style.css" + version)
-
-			+style('header', 'blocks')
-			include ../../blocks/header/header
-			+script('header', 'blocks')
-			
-			main.main
-				block content
-
-			+style('footer', 'blocks')
-			include ../../blocks/footer/footer
-
-			script(src="template/js/common.js" + version)
+		style.
+			body {
+				opacity: 0
+			}
+		link(rel="stylesheet" href="template/css/style.css" + version)
+		link(rel="stylesheet" href="template/css/responsive.css" + version)
+		<link rel="icon" type="image/svg+xml" href="uploads/logo-icon.svg">
+	
+	block content

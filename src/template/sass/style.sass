@@ -13,6 +13,127 @@
 // @import ../components/slider/slider
 // @import ../components/tog/tog
 
+.load-prelouder
+	opacity: 1
+
+.loaded
+	.prelouder
+		opacity: 0
+		visibility: hidden
+	iframe
+		opacity: 1
+	.inst-container
+		opacity: 1
+	.wrap
+		background-color: transparent
+
+.prelouder
+	z-index: 1000005
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	&.--hide
+		opacity: 0
+	&__logo
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		z-index: 5
+		position: relative
+		width: 428px
+		height: 428px
+		border-radius: 50%
+		background: rgba(19, 19, 19, 0.4)
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		&-round
+			position: absolute
+			&:nth-of-type(1)
+				left: 60px
+				bottom: 90px
+				.prelouder__logo-dot
+					border-radius: 50%
+					transform: rotate(-15deg)
+					animation: 4s rotateDot1 0s infinite linear
+					&:before
+						bottom: 7px
+						right: 7px
+			&:nth-of-type(2)
+				right: 60px
+				top: 90px
+				.prelouder__logo-dot
+					border-radius: 50%
+					transform: rotate(230deg)
+					animation: 4s rotateDot2 2s infinite linear
+					&:before
+						left: 7px
+						top: 7px
+		&-dot
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			&:before
+				content: ''
+				position: absolute
+				width: 30px
+				height: 30px
+				border-radius: 50%
+				background-color: #fff
+
+
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+
+@keyframes rotateDot1
+	0%
+		opacity: 0
+		transform: rotate(-15deg)
+	2%
+		opacity: 1
+	45%
+		opacity: 1
+	50%
+		opacity: 0
+		transform: rotate(230deg)
+
+@keyframes rotateDot2
+	0%
+		opacity: 0
+		transform: rotate(230deg)
+	2%
+		opacity: 1
+	49%
+		opacity: 1
+	50%
+		opacity: 0
+		transform: rotate(-15deg)
+		
+.wrap
+	position: relative
+	z-index: 100000666666
+	background-color: #fff
+	&.--z-index
+		z-index: 1
+
 @import typography
 
 .cursor
@@ -139,12 +260,6 @@
 u
 	display: inline
 	color: #fff
-	background: radial-gradient(circle 50px at var(--x,0) var(--y,0), $black 99%, #fff 100%) fixed
-	background-clip: text
-	color: transparent
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	text-fill-color: transparent
 
 .logo
 	display: flex
@@ -189,16 +304,21 @@ u
 	padding-bottom: 13px
 	background-color: #fff
 	border-bottom: 1px solid #E6E6E6
-	cursor: default
-	*
-		cursor: default
+	&__ham
+		display: none
 	.socials
 		&__item
 			cursor: pointer
+			*
+				cursor: pointer
 	&__wrap
 		align-items: center
 	&__socials
 		margin-left: auto
+
+
+.nav
+	display: none
 
 .intro
 	padding-top: 40px
@@ -215,6 +335,7 @@ u
 			// border: 1px solid #f00
 	&__wrap
 		position: relative
+		min-height: 600px
 	&__content
 		z-index: 1
 		position: relative
@@ -222,6 +343,11 @@ u
 		padding-top: 77px
 	&__title
 		margin-right: -300px
+		overflow: hidden
+		&-inner
+			transition: 1.4s
+			transition-delay: 2s 
+			transform: translateY(-100%)
 		span
 			display: block
 			&:nth-of-type(3)
@@ -229,10 +355,25 @@ u
 	&__text
 		margin-top: 70px
 		max-width: 310px
+		overflow: hidden
+		&-inner
+			transition: 1.4s
+			transition-delay: 2s 
+			transform: translateY(-100%)
 	&__img
 		width: 600px
-		height: 600px
+		// height: 600px
+		transition: 2s
+		height: 0
+		overflow: hidden
+		&-wrap
+			width: 600px
+			height: 600px
+			img
+				transform: scale(1.2)
+				transition: 2s
 	&__round-text
+		opacity: 0
 		z-index: 3
 		position: absolute
 		right: 600px
@@ -242,7 +383,13 @@ u
 		font-size: 24px
 		font-family: $ff2
 		letter-spacing: 3px
-		transform: translate(50%, 50%) rotate(100deg)
+		transition: 2s
+		transition-delay: 1s
+		transform: translate(50%, 50%) rotate(0deg)
+		// transform: translate(50%, 50%)
+		svg
+			width: 100%
+			height: 100%
 		&:before
 			content: ''
 			position: absolute
@@ -253,13 +400,26 @@ u
 			border-radius: 50%
 			border: 1px solid #E6E6E6
 			transform: translate(-50%, -50%)
-// .r-text
-// 	&__
-		
+	&.animated
+		.intro
+			&__title-inner
+				transform: translateY(0%)
+			&__round-text
+				opacity: 1
+				transform: translate(50%, 50%) rotate(267deg)
+			&__text-inner
+				transform: translateY(0%)
+			&__img
+				height: 600px
+				&-wrap
+					img
+						transform: scale(1)
+				
 
 
 
 .r-text
+	transition-delay: 2.3s
 	&__title
 		font-size: 24px
 		line-height: 1.2
@@ -288,10 +448,18 @@ u
 	padding-bottom: 115px
 	&__wrap
 		position: relative
+		min-height: 300px
 	&__img
 		width: 300px
 		height: 300px
+		transition: 2s
+		height: 0
+		overflow: hidden
+		&-wrap
+			width: 300px
+			height: 300px
 	&__title
+		opacity: 0
 		top: 115px
 		left: 50%
 		position: absolute
@@ -299,7 +467,14 @@ u
 		width: 100%
 		max-width: 865px
 		margin-left: -435px
-
+		overflow: hidden
+		transition: 2s
+	&.animated
+		.lose
+			&__img
+				height: 300px
+			&__title
+				opacity: 1
 
 .services
 	position: relative
@@ -307,6 +482,10 @@ u
 		display: none
 	&__list
 		position: relative
+		overflow: hidden
+		border-bottom: 1px solid #E6E6E6
+	&__hidden
+		display: none
 	&__item
 		// background: #FFFFFF
 		border-top: 1px solid #E6E6E6
@@ -318,19 +497,27 @@ u
 		justify-content: center
 		padding-top: 105px
 		padding-bottom: 105px
-		border-top: 1px solid #E6E6E6
+		&.--hidden
+			display: none
 
 .service
+	z-index: 1
 	display: flex
 	align-items: center
-	position: relative
 	min-height: 100vh
 	transition: none
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
-	transform: translateY(0)
+	bottom: 0
+	transform: translateY(100%)
+	background-color: #fff
+	transition: .3s
+	&:nth-of-type(1)
+		opacity: 1
+		position: relative
+		transform: translateY(0%)
 	&__bg
 		opacity: 0
 		z-index: 5
@@ -349,7 +536,8 @@ u
 		// padding-top: 100px
 		// padding-bottom: 100px
 		transition: none
-		transform: translateY(0%)
+
+			
 	&__wrap
 		display: flex
 		position: relative
@@ -379,12 +567,18 @@ u
 	&__text
 		width: 100%
 		max-width: 300px
+		p
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
 	&__img
 		width: 600px
 		min-width: 600px
 		height: 600px
 		img
 			filter: grayscale(100%)
+		&.--hidden
+			display: none
 
 	&__desc
 		max-width: 280px
@@ -414,11 +608,14 @@ u
 .club-name
 	z-index: 3
 	position: relative
-	overflow: hidden
+	// overflow: hidden
 	padding-top: 80px
+	transition: 2s
 	&__title
 		color: $dark
 		white-space: nowrap
+		animation: inifiniteLine 10s infinite linear
+		min-width: 2335px
 		&:before, &:after
 			display: inline-block
 			vertical-align: middle
@@ -433,6 +630,12 @@ u
 			margin-right: 20px
 		&:after
 			margin-left: 20px
+
+@keyframes inifiniteLine
+	0%
+		transform: translateX(110%)
+	100%
+		transform: translateX(-110%)
 
 .invite
 	z-index: 4
@@ -484,10 +687,16 @@ u
 		border-radius: 50%
 		&:nth-of-type(1)
 			margin-right: -80px
+			.about
+				&__shape
+					svg
+						animation: rotateRight 8s infinite linear
 		&:nth-of-type(2)
 			.about
 				&__shape
 					transform: translate(-50%, -50%) rotate(220deg)
+					svg
+						animation: rotateRight 8s 1s infinite linear
 	&__text
 		width: 100%
 		line-height: 1.2
@@ -505,6 +714,11 @@ u
 		letter-spacing: 3px
 		// transform: translate(-50%, -50%) rotate(100deg)
 		transform: translate(-50%, -50%) rotate(0deg)
+		svg
+			width: 100%
+			height: 100%
+			path
+				stroke: none
 		&:before
 			content: ''
 			position: absolute
@@ -517,6 +731,10 @@ u
 			transform: translate(-50%, -50%)
 		
 
+.thanks
+	padding-top: 70px
+	padding-bottom: 70px
+	text-align: center
 
 .footer
 	color: #fff
@@ -535,6 +753,8 @@ u
 		.logo
 			&__text
 				// padding-top: 0
+				path
+					// transition: 1s
 	&__inner
 		display: flex
 		justify-content: space-between
@@ -581,9 +801,11 @@ u
 		ul
 			justify-content: space-between
 		a
-			// &:hover
-			// 	opacity: 0.5
-			// 	transition: .3s
+			&:hover
+				opacity: 0.5
+				transition: .3s
+		&.--hidden
+			display: none
 .win
 	position: relative
 	// border-top: 1px solid #E6E6E6
@@ -608,27 +830,68 @@ u
 	&__shape
 		position: absolute
 		border-radius: 50%
-		border: 1px solid #2B2B2B
 		transition: 1s
+		&:before
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			position: absolute
+			border-radius: 50%
+			border: 1px solid #2B2B2B
 		&:nth-of-type(1)
 			top: 71px
 			left: -675px
+			// width: 1800px
+			// height: 1800px
 			width: 1175px
 			height: 1175px
+			// animation: 8s rotateRight infinite linear
+			&:before
+				// width: 1175px
+				// height: 1175px
 		&:nth-of-type(2)
 			top: 225px
 			right: -108px
+			// width: 1300px
+			// height: 1300px
 			width: 700px
 			height: 700px
+			// animation: 8s rotateLeft infinite linear
+			&:before
+				// width: 700px
+				// height: 700px
 
 
-
+@keyframes rotateRight
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+@keyframes rotateLeft
+	from
+		transform: rotate(0deg)
+	to
+		transform: rotate(-360deg)
+	// 50%
+	// 	transform: rotate(180deg)
+	// 75%
+	// 	transform: translate(0, 20%)
+	// 100%
+	// 	transform: translate(0, 0)
 
 .colors-reverse
 	.footer
 		color: $black
 		a
 			color: $black
+		&__logo
+			.logo
+				&__icon
+					path
+						fill: $black
+						transition: 1s
 		&__bot-wrap
 			border-color: #E6E6E6
 		&__title

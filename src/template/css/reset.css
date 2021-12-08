@@ -7,6 +7,13 @@
   cursor: default;
 }
 
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   color: #121212;
   font-size: 14px;
