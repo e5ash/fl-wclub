@@ -133,6 +133,10 @@
 	background-color: #fff
 	&.--z-index
 		z-index: 1
+	&.--page
+		display: flex
+		flex-direction: column
+		min-height: 100vh
 
 @import typography
 
@@ -166,6 +170,7 @@
 	font-family: $ffMain
 	// cursor: pointer
 	background-color: transparent
+	transition: .3s !important
 	&__inner
 		z-index: 2
 		position: relative
@@ -478,12 +483,16 @@ u
 
 .services
 	position: relative
+	border-bottom: 1px solid #E6E6E6
 	&.--other
 		display: none
 	&__list
 		position: relative
-		overflow: hidden
-		border-bottom: 1px solid #E6E6E6
+		// overflow: hidden
+		
+		cursor: col-resize !important
+		*
+			cursor: col-resize !important
 	&__hidden
 		display: none
 	&__item
@@ -506,18 +515,18 @@ u
 	align-items: center
 	min-height: 100vh
 	transition: none
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	transform: translateY(100%)
+	// position: absolute
+	// top: 0
+	// left: 0
+	// right: 0
+	// bottom: 0
+	// transform: translateY(100%)
 	background-color: #fff
 	transition: .3s
 	&:nth-of-type(1)
 		opacity: 1
 		position: relative
-		transform: translateY(0%)
+		// transform: translateY(0%)
 	&__bg
 		opacity: 0
 		z-index: 5
@@ -536,7 +545,6 @@ u
 		// padding-top: 100px
 		// padding-bottom: 100px
 		transition: none
-
 			
 	&__wrap
 		display: flex
@@ -551,6 +559,7 @@ u
 			height: 500px
 			border: 1px solid #E6E6E6
 			border-radius: 50%
+			cursor: col-resize !important
 			transform: translateX(-50%)
 	&__content
 		display: flex
@@ -732,15 +741,60 @@ u
 		
 
 .thanks
-	padding-top: 70px
-	padding-bottom: 70px
+	padding-top: 50px
+	padding-bottom: 100px
 	text-align: center
+	&__inner
+		display: flex
+		align-items: center
+		flex-direction: column
+	&__desc, &__title, &__text-top, &__text-bot
+		z-index: 1
+		position: relative
+		
+	&__desc
+		margin-bottom: 20px
+	&__title
+		font-size: 48px
+		line-height: 1.23
+		margin-bottom: 40px
+	&__btn
+		margin-top: 95px
+		margin-bottom: 95px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 750px
+			height: 750px
+			border-radius: 50%
+			transform: translate(-50%, -50%)
+			border: 1px solid #E6E6E6
+
+	&__text-top
+		max-width: 415px
+	&__text-bot
+		max-width: 330px
+		
 
 .footer
 	color: #fff
 	// background: #121212
 	overflow: hidden
 	// cursor: default
+	&.--pt
+		background: #fff
+		padding-top: 70px
+		margin-top: auto
+		color: $black
+		a
+			color: $black
+			&:hover
+				color: lighten($black, 10%)
+		.footer
+			&__bot-wrap
+				border-color: $black
 	*
 		transition: .1s
 	a

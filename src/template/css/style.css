@@ -315,6 +315,11 @@ img, svg, path, circle, rect, line {
 .wrap.--z-index {
   z-index: 1;
 }
+.wrap.--page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .tal {
   text-align-last: left;
@@ -396,6 +401,7 @@ img, svg, path, circle, rect, line {
   font-size: 14px;
   font-family: "HelveticaNeueCyr", sans-serif;
   background-color: transparent;
+  transition: 0.3s !important;
 }
 .btn__inner {
   z-index: 2;
@@ -736,14 +742,17 @@ u {
 
 .services {
   position: relative;
+  border-bottom: 1px solid #E6E6E6;
 }
 .services.--other {
   display: none;
 }
 .services__list {
   position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid #E6E6E6;
+  cursor: col-resize !important;
+}
+.services__list * {
+  cursor: col-resize !important;
 }
 .services__hidden {
   display: none;
@@ -769,19 +778,12 @@ u {
   align-items: center;
   min-height: 100vh;
   transition: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateY(100%);
   background-color: #fff;
   transition: 0.3s;
 }
 .service:nth-of-type(1) {
   opacity: 1;
   position: relative;
-  transform: translateY(0%);
 }
 .service__bg {
   opacity: 0;
@@ -815,6 +817,7 @@ u {
   height: 500px;
   border: 1px solid #E6E6E6;
   border-radius: 50%;
+  cursor: col-resize !important;
   transform: translateX(-50%);
 }
 .service__content {
@@ -1029,14 +1032,67 @@ u {
 }
 
 .thanks {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   text-align: center;
+}
+.thanks__inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.thanks__desc, .thanks__title, .thanks__text-top, .thanks__text-bot {
+  z-index: 1;
+  position: relative;
+}
+.thanks__desc {
+  margin-bottom: 20px;
+}
+.thanks__title {
+  font-size: 48px;
+  line-height: 1.23;
+  margin-bottom: 40px;
+}
+.thanks__btn {
+  margin-top: 95px;
+  margin-bottom: 95px;
+}
+.thanks__btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #E6E6E6;
+}
+.thanks__text-top {
+  max-width: 415px;
+}
+.thanks__text-bot {
+  max-width: 330px;
 }
 
 .footer {
   color: #fff;
   overflow: hidden;
+}
+.footer.--pt {
+  background: #fff;
+  padding-top: 70px;
+  margin-top: auto;
+  color: #121212;
+}
+.footer.--pt a {
+  color: #121212;
+}
+.footer.--pt a:hover {
+  color: #2c2c2c;
+}
+.footer.--pt .footer__bot-wrap {
+  border-color: #121212;
 }
 .footer * {
   transition: 0.1s;

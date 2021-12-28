@@ -522,6 +522,13 @@
     display: block;
   }
 
+  .services * {
+    cursor: default !important;
+  }
+  .services__list {
+    transform: none !important;
+    flex-direction: column;
+  }
   .services__more-wrap {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -533,6 +540,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     transform: none !important;
+  }
+  .service.swiper-slide-duplicate {
+    display: none !important;
   }
   .service__wrap:before {
     display: none;
@@ -606,7 +616,7 @@
   }
 
   .club-name {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .club-name__title {
     min-width: 1000px;
@@ -720,6 +730,21 @@
     height: 290px;
     bottom: 0;
     top: auto;
+  }
+
+  .thanks {
+    padding-bottom: 40px;
+  }
+  .thanks__title {
+    font-size: 32px;
+  }
+  .thanks__btn {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .thanks__btn:before {
+    width: 470px;
+    height: 470px;
   }
 
   .footer .footer__body-wrap {

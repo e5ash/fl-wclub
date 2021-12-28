@@ -8,7 +8,8 @@ block vars
 		]
 block content
 	body.load-prelouder.loaded
-		.wrap
+		<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6QQ5RM"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+		.wrap.--page
 			+style('header', 'blocks')
 			- toMain = true
 			include ../../../blocks/header/header
@@ -29,10 +30,18 @@ block content
 				.inner
 					.thanks
 						.case
-							.thanks__title.h1 Спасибо
+							.thanks__inner
+								.thanks__desc.h3 Поздравляем!
+								.thanks__title.h2 Вы участница клуба <br>успешных женщин!
+								.thanks__text-top.t1 Для доступа нажмите здесь и зарегистрируйтесь.
+								a.thanks__btn.btn.--md.--bg-black(href="https://member.infinityvip.club/wpm/start/#registration" target="_blank")
+									.btn__inner Регистрация
+									.btn__shape
+									.btn__shape
+								.thanks__text-bot.t1 Если возникли вопросы напишите #[a(href="mailto:info@infinityvip.club или обратитесь в чат") Info@infinityvip.club] или обратитесь в чат
 
-			// +style('footer', 'blocks')
-			// include ../../../blocks/footer/footer
+			+style('footer', 'blocks')
+			include ../../../blocks/footer/footer
 
 			script(src="template/js/common.js" + version)
 			<script type="text/javascript">var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src='https://embed.tawk.to/61486382d326717cb6825eeb/1fg1c9dks';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();</script>

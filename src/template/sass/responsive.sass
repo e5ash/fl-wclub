@@ -460,6 +460,11 @@
 				display: block
 
 	.services
+		*
+			cursor: default !important
+		&__list
+			transform: none !important
+			flex-direction: column
 		&__more-wrap
 			padding-top: 50px
 			padding-bottom: 50px
@@ -470,6 +475,8 @@
 		padding-top: 30px
 		padding-bottom: 30px
 		transform: none !important
+		&.swiper-slide-duplicate
+			display: none !important
 		&__wrap
 			&:before
 				display: none
@@ -533,7 +540,7 @@
 			display: none
 
 	.club-name
-		padding-top: 30px
+		padding-top: 50px
 		&__title
 			min-width: 1000px
 			&:before, &:after
@@ -624,6 +631,17 @@
 				height: 290px
 				bottom: 0
 				top: auto
+
+	.thanks
+		padding-bottom: 40px
+		&__title
+			font-size: 32px
+		&__btn
+			margin-top: 35px
+			margin-bottom: 35px
+			&:before
+				width: 470px
+				height: 470px
 	.footer
 		.footer
 			&__body-wrap

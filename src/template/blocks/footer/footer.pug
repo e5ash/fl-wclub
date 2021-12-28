@@ -1,19 +1,20 @@
 include ../../pug/vars
 
-footer.footer
-	.footer__win.win
-		.case
-			.win__wrap
-				.win__title.h2 В мире происходит коллапс,  катастрофы, кризисы, пандемии, только объединившись, <br>МЫ победим.
-				.win__text.t1 Если ты хочешь быть такой же успешной, как многие  члены нашего клуба, заполняй анкету и станем счастливыми вместе!
-				.win__btn.btn.btn.--bg-white.--md.--round.--colors-reverse
-					.btn__inner Вступить в клуб!
-					.btn__shape
-					.btn__shape
+footer.footer(class=!win ? '--pt' : null)
+	if (win)
+		.footer__win.win
+			.case
+				.win__wrap
+					.win__title.h2 В мире происходит коллапс,  катастрофы, кризисы, пандемии, только объединившись, <br>МЫ победим.
+					.win__text.t1 Если ты хочешь быть такой же успешной, как многие  члены нашего клуба, заполняй анкету и станем счастливыми вместе!
+					a.win__btn.btn.btn.--bg-white.--md.--round.--colors-reverse(href="https://infinityvip.e-autopay.com/buy/513666" target="_blank")
+						.btn__inner Вступить в клуб!
+						.btn__shape
+						.btn__shape
 
-			.win__shapes
-				.win__shape
-				.win__shape
+				.win__shapes
+					.win__shape
+					.win__shape
 
 	.footer__body-wrap
 		.case
@@ -33,7 +34,7 @@ footer.footer
 					.footer__col
 						.footer__title пишите
 						.footer__text
-							p #[a(href="mailto:info@miratexhouse.com") info@miratexhouse.com]
+							p #[a(href="mailto:Info@infinityvip.club") Info@infinityvip.club]
 					.footer__col
 						.footer__title приезжайте
 						.footer__text
