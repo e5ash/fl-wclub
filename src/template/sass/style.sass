@@ -14,962 +14,1134 @@
 // @import ../components/tog/tog
 
 .load-prelouder
-	opacity: 1
+  opacity: 1
 
 .loaded
-	.prelouder
-		opacity: 0
-		visibility: hidden
-	iframe
-		opacity: 1
-	.inst-container
-		opacity: 1
-	.wrap
-		background-color: transparent
+  .prelouder
+    opacity: 0
+    visibility: hidden
+  iframe
+    opacity: 1
+  .inst-container
+    opacity: 1
+  .wrap
+    background-color: transparent
 
 .prelouder
-	z-index: 1000005
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	display: flex
-	align-items: center
-	justify-content: center
-	&.--hide
-		opacity: 0
-	&__logo
-		position: relative
-		display: flex
-		align-items: center
-		justify-content: center
-		z-index: 5
-		position: relative
-		width: 428px
-		height: 428px
-		border-radius: 50%
-		background: rgba(19, 19, 19, 0.4)
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
-		&-round
-			position: absolute
-			&:nth-of-type(1)
-				left: 60px
-				bottom: 90px
-				.prelouder__logo-dot
-					border-radius: 50%
-					transform: rotate(-15deg)
-					animation: 4s rotateDot1 0s infinite linear
-					&:before
-						bottom: 7px
-						right: 7px
-			&:nth-of-type(2)
-				right: 60px
-				top: 90px
-				.prelouder__logo-dot
-					border-radius: 50%
-					transform: rotate(230deg)
-					animation: 4s rotateDot2 2s infinite linear
-					&:before
-						left: 7px
-						top: 7px
-		&-dot
-			opacity: 0
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			&:before
-				content: ''
-				position: absolute
-				width: 30px
-				height: 30px
-				border-radius: 50%
-				background-color: #fff
+  z-index: 1000005
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  &.--hide
+    opacity: 0
+  &__logo
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 5
+    position: relative
+    width: 428px
+    height: 428px
+    border-radius: 50%
+    background: rgba(19, 19, 19, 0.4)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &-round
+      position: absolute
+      &:nth-of-type(1)
+        left: 60px
+        bottom: 90px
+        .prelouder__logo-dot
+          border-radius: 50%
+          transform: rotate(-15deg)
+          animation: 4s rotateDot1 0s infinite linear
+          &:before
+            bottom: 7px
+            right: 7px
+      &:nth-of-type(2)
+        right: 60px
+        top: 90px
+        .prelouder__logo-dot
+          border-radius: 50%
+          transform: rotate(230deg)
+          animation: 4s rotateDot2 2s infinite linear
+          &:before
+            left: 7px
+            top: 7px
+    &-dot
+      opacity: 0
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        background-color: #fff
 
 
-	&__img
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		img
-			object-fit: cover
-			width: 100%
-			height: 100%
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
 
 @keyframes rotateDot1
-	0%
-		opacity: 0
-		transform: rotate(-15deg)
-	2%
-		opacity: 1
-	45%
-		opacity: 1
-	50%
-		opacity: 0
-		transform: rotate(230deg)
+  0%
+    opacity: 0
+    transform: rotate(-15deg)
+  2%
+    opacity: 1
+  45%
+    opacity: 1
+  50%
+    opacity: 0
+    transform: rotate(230deg)
 
 @keyframes rotateDot2
-	0%
-		opacity: 0
-		transform: rotate(230deg)
-	2%
-		opacity: 1
-	49%
-		opacity: 1
-	50%
-		opacity: 0
-		transform: rotate(-15deg)
-		
+  0%
+    opacity: 0
+    transform: rotate(230deg)
+  2%
+    opacity: 1
+  49%
+    opacity: 1
+  50%
+    opacity: 0
+    transform: rotate(-15deg)
+    
 .wrap
-	position: relative
-	z-index: 100000666666
-	background-color: #fff
-	&.--z-index
-		z-index: 1
-	&.--page
-		display: flex
-		flex-direction: column
-		min-height: 100vh
+  position: relative
+  z-index: 100000666666
+  background-color: #fff
+  &.--z-index
+    z-index: 1
+  &.--page
+    display: flex
+    flex-direction: column
+    min-height: 100vh
 
 @import typography
 
 .cursor
-	// display: none
-	position: fixed
-	width: 100px
-	height: 100px
-	background: $black
-	border-radius: 50%
-	top: 0
-	left: 0
-	transform: translate(-50%,-50%)
-	z-index: -2
-	transition: opacity .3s
-	// transition: background .3s
-	// &.--white
-	// 	background-color: #fff
-	&.--hidden
-		opacity: 0
+  // display: none
+  position: fixed
+  width: 100px
+  height: 100px
+  background: $black
+  border-radius: 50%
+  top: 0
+  left: 0
+  transform: translate(-50%,-50%)
+  z-index: -2
+  transition: opacity .3s
+  // transition: background .3s
+  // &.--white
+  //  background-color: #fff
+  &.--hidden
+    opacity: 0
 
 .wrap
-	overflow: hidden
+  overflow: hidden
 
 .btn
-	// z-index: 5
-	// z-index: -1
-	position: relative
-	cursor: pointer
-	font-size: $fzMain
-	font-family: $ffMain
-	// cursor: pointer
-	background-color: transparent
-	transition: .3s !important
-	&__inner
-		z-index: 2
-		position: relative
-		display: flex
-		align-items: center
-		justify-content: center
-		transition: .3s
-		cursor: pointer
-	&__shape
-		z-index: -1
-		position: absolute
-		top: 50%
-		left: 50%
-		width: 0
-		height: 0
-		border-radius: 50%
-		transform: translate(-50%, -50%)
-		&:nth-of-type(2)
-			z-index: -2
-			transition: 1s
-		&:nth-of-type(3)
-			z-index: -1
-			transition: 1s
-			
-	&.--bg-black
-		.btn
-			&__inner
-				color: #fff
-				border: 1px solid #121212
-				background-color: #2B2B2B
-				&:hover
-					color: #2B2B2B
-					background-color: #fff
-			&__shape
-				&:nth-of-type(2)
-					background-color: #121212
-				&:nth-of-type(3)
-					border: 1px solid #E6E6E6
+  // z-index: 5
+  // z-index: -1
+  position: relative
+  cursor: pointer
+  font-size: $fzMain
+  font-family: $ffMain
+  // cursor: pointer
+  background-color: transparent
+  transition: .3s !important
+  &__inner
+    z-index: 2
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s
+    cursor: pointer
+  &__shape
+    z-index: -1
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 0
+    height: 0
+    border-radius: 50%
+    transform: translate(-50%, -50%)
+    &:nth-of-type(2)
+      z-index: -2
+      transition: 1s
+    &:nth-of-type(3)
+      z-index: -1
+      transition: 1s
+      
+  &.--bg-black
+    .btn
+      &__inner
+        color: #fff
+        border: 1px solid #121212
+        background-color: #2B2B2B
+        &:hover
+          color: #2B2B2B
+          background-color: #fff
+      &__shape
+        &:nth-of-type(2)
+          background-color: #121212
+        &:nth-of-type(3)
+          border: 1px solid #E6E6E6
 
-	&.--bg-white
-		.btn
-			&__inner
-				color: #2B2B2B
-				background-color: #fff
-				&:hover
-					color: #fff
-					background-color: #121212
-			&__shape
-				&:nth-of-type(2)
-					background-color: #121212
-				&:nth-of-type(3)
-					border: 1px solid #2B2B2B
-	&.--md
-		font-size: 16px
-		font-weight: 500
-		.btn
-			&__inner
-				width: 200px
-				height: 200px
-				border-radius: 50%
-			&__shape
-				&:nth-of-type(3)
-					width: 270px
-					height: 270px
-	&.--colors-reverse
-		.btn
-			&__shape
-				&:nth-of-type(2)
-					width: 4500px
-					height: 4500px
-			&__inner
-				&:hover + .btn__shape
-					width: 4500px
-					height: 4500px
-				&:hover + .btn__shape + .btn__shape
-					// transition: 0.3s
-					border-color: #2B2B2B !important
-				&:hover + .btn__shape
-					width: 0px
-					height: 0px
-				&:hover + .btn__shape + .btn__shape
-					// transition: .3s
-					border-color: #E6E6E6 !important
-		
+  &.--bg-white
+    .btn
+      &__inner
+        color: #2B2B2B
+        background-color: #fff
+        &:hover
+          color: #fff
+          background-color: #121212
+      &__shape
+        &:nth-of-type(2)
+          background-color: #121212
+        &:nth-of-type(3)
+          border: 1px solid #2B2B2B
+  &.--md
+    font-size: 16px
+    font-weight: 500
+    .btn
+      &__inner
+        width: 200px
+        height: 200px
+        border-radius: 50%
+      &__shape
+        &:nth-of-type(3)
+          width: 270px
+          height: 270px
+  &.--colors-reverse
+    .btn
+      &__shape
+        &:nth-of-type(2)
+          width: 4500px
+          height: 4500px
+      &__inner
+        &:hover + .btn__shape
+          width: 4500px
+          height: 4500px
+        &:hover + .btn__shape + .btn__shape
+          // transition: 0.3s
+          border-color: #2B2B2B !important
+        &:hover + .btn__shape
+          width: 0px
+          height: 0px
+        &:hover + .btn__shape + .btn__shape
+          // transition: .3s
+          border-color: #E6E6E6 !important
+    
 
 .img
-	img
-		width: 100%
-		height: 100%
-		object-fit: cover
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 u
-	display: inline
-	color: #fff
+  display: inline
+  color: #fff
 
 .logo
-	display: flex
-	align-items: center
-	&__icon
-		margin-right: 8px
-	&__text
-		text-transform: uppercase
-		// padding-left: 8px
-		padding-top: 2px
-	&__title
-		font-size: 14px
-		line-height: 14px
-		letter-spacing: 0.065em
-		font-weight: 900
-	&__desc
-		font-size: 10px
-		line-height: 1.115
-		letter-spacing: 0.03em
-		margin-top: 3px
+  display: flex
+  align-items: center
+  &__icon
+    margin-right: 8px
+  &__text
+    text-transform: uppercase
+    // padding-left: 8px
+    padding-top: 2px
+  &__title
+    font-size: 14px
+    line-height: 14px
+    letter-spacing: 0.065em
+    font-weight: 900
+  &__desc
+    font-size: 10px
+    line-height: 1.115
+    letter-spacing: 0.03em
+    margin-top: 3px
 
 .socials
-	&__list
-		display: flex
-		align-items: center
-		margin-left: -8.5px
-		margin-right: -8.5px
-	&__item
-		margin-left: 8.5px
-		margin-right: 8.5px
-		&:hover
-			opacity: 0.4
-		
+  &__list
+    display: flex
+    align-items: center
+    margin-left: -8.5px
+    margin-right: -8.5px
+  &__item
+    margin-left: 8.5px
+    margin-right: 8.5px
+    &:hover
+      opacity: 0.4
+    
 
 .header
-	// z-index: 100
-	// top: 0
-	// left: 0
-	// right: 0
-	// position: fixed
-	padding-top: 13px
-	padding-bottom: 13px
-	background-color: #fff
-	border-bottom: 1px solid #E6E6E6
-	&__ham
-		display: none
-	.socials
-		&__item
-			cursor: pointer
-			*
-				cursor: pointer
-	&__wrap
-		align-items: center
-	&__socials
-		margin-left: auto
+  // z-index: 100
+  // top: 0
+  // left: 0
+  // right: 0
+  // position: fixed
+  padding-top: 13px
+  padding-bottom: 13px
+  background-color: #fff
+  border-bottom: 1px solid #E6E6E6
+  &__ham
+    display: none
+  .socials
+    &__item
+      cursor: pointer
+      *
+        cursor: pointer
+  &__wrap
+    align-items: center
+  &__socials
+    margin-left: auto
 
 
 .nav
-	display: none
+  display: none
 
 .intro
-	padding-top: 40px
-	.case
-		&:before
-			position: absolute
-			content: ''
-			top: 317px
-			left: -690px
-			width: 1175px
-			height: 1175px
-			border-radius: 50%
-			border: 1px solid #E6E6E6
-			// border: 1px solid #f00
-	&__wrap
-		position: relative
-		min-height: 600px
-	&__content
-		z-index: 1
-		position: relative
-		width: calc(100% - 600px)
-		padding-top: 77px
-	&__title
-		margin-right: -300px
-		overflow: hidden
-		&-inner
-			transition: 1.4s
-			transition-delay: 2s 
-			transform: translateY(-100%)
-		span
-			display: block
-			&:nth-of-type(3)
-				margin-left: 277px
-	&__text
-		margin-top: 70px
-		max-width: 310px
-		overflow: hidden
-		&-inner
-			transition: 1.4s
-			transition-delay: 2s 
-			transform: translateY(-100%)
-	&__img
-		width: 600px
-		// height: 600px
-		transition: 2s
-		height: 0
-		overflow: hidden
-		&-wrap
-			width: 600px
-			height: 600px
-			img
-				transform: scale(1.2)
-				transition: 2s
-	&__round-text
-		opacity: 0
-		z-index: 3
-		position: absolute
-		right: 600px
-		bottom: 0
-		width: 172px
-		height: 172px
-		font-size: 24px
-		font-family: $ff2
-		letter-spacing: 3px
-		transition: 2s
-		transition-delay: 1s
-		transform: translate(50%, 50%) rotate(0deg)
-		// transform: translate(50%, 50%)
-		svg
-			width: 100%
-			height: 100%
-		&:before
-			content: ''
-			position: absolute
-			top: 50%
-			left: 50%
-			width: 120px
-			height: 120px
-			border-radius: 50%
-			border: 1px solid #E6E6E6
-			transform: translate(-50%, -50%)
-	&.animated
-		.intro
-			&__title-inner
-				transform: translateY(0%)
-			&__round-text
-				opacity: 1
-				transform: translate(50%, 50%) rotate(267deg)
-			&__text-inner
-				transform: translateY(0%)
-			&__img
-				height: 600px
-				&-wrap
-					img
-						transform: scale(1)
-				
+  padding-top: 40px
+  .case
+    &:before
+      position: absolute
+      content: ''
+      top: 317px
+      left: -690px
+      width: 1175px
+      height: 1175px
+      border-radius: 50%
+      border: 1px solid #E6E6E6
+      // border: 1px solid #f00
+  &__wrap
+    position: relative
+    min-height: 600px
+  &__content
+    z-index: 1
+    position: relative
+    width: calc(100% - 600px)
+    padding-top: 77px
+  &__title
+    margin-right: -300px
+    overflow: hidden
+    &-inner
+      transition: 1.4s
+      transition-delay: 2s 
+      transform: translateY(-100%)
+    span
+      display: block
+      &:nth-of-type(3)
+        margin-left: 277px
+  &__text
+    margin-top: 70px
+    max-width: 310px
+    overflow: hidden
+    &-inner
+      transition: 1.4s
+      transition-delay: 2s 
+      transform: translateY(-100%)
+  &__img
+    width: 600px
+    // height: 600px
+    transition: 2s
+    height: 0
+    overflow: hidden
+    &-wrap
+      width: 600px
+      height: 600px
+      img
+        transform: scale(1.2)
+        transition: 2s
+  &__round-text
+    opacity: 0
+    z-index: 3
+    position: absolute
+    right: 600px
+    bottom: 0
+    width: 172px
+    height: 172px
+    font-size: 24px
+    font-family: $ff2
+    letter-spacing: 3px
+    transition: 2s
+    transition-delay: 1s
+    transform: translate(50%, 50%) rotate(0deg)
+    // transform: translate(50%, 50%)
+    svg
+      width: 100%
+      height: 100%
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      border: 1px solid #E6E6E6
+      transform: translate(-50%, -50%)
+  &.animated
+    .intro
+      &__title-inner
+        transform: translateY(0%)
+      &__round-text
+        opacity: 1
+        transform: translate(50%, 50%) rotate(267deg)
+      &__text-inner
+        transform: translateY(0%)
+      &__img
+        height: 600px
+        &-wrap
+          img
+            transform: scale(1)
+        
 
 
 
 .r-text
-	transition-delay: 2.3s
-	&__title
-		font-size: 24px
-		line-height: 1.2
-		font-family: $ff2
-		// text-transform: uppercase
-		min-height: 140px
-		width: 140px
-		height: 140px
-		i
-			height: 70px
-			position: absolute
-			transform-origin: center bottom 0px
-	&__shape
-		position: absolute
-		top: 50%
-		left: 50%
-		width: 120px
-		height: 120px
-		border-radius: 50%
-		border: 1px solid #E6E6E6
-		transform: translate(-50%, -50%)
+  transition-delay: 2.3s
+  &__title
+    font-size: 24px
+    line-height: 1.2
+    font-family: $ff2
+    // text-transform: uppercase
+    min-height: 140px
+    width: 140px
+    height: 140px
+    i
+      height: 70px
+      position: absolute
+      transform-origin: center bottom 0px
+  &__shape
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 120px
+    height: 120px
+    border-radius: 50%
+    border: 1px solid #E6E6E6
+    transform: translate(-50%, -50%)
 
 
 .lose
-	padding-top: 115px
-	padding-bottom: 115px
-	&__wrap
-		position: relative
-		min-height: 300px
-	&__img
-		width: 300px
-		height: 300px
-		transition: 2s
-		height: 0
-		overflow: hidden
-		&-wrap
-			width: 300px
-			height: 300px
-	&__title
-		opacity: 0
-		top: 115px
-		left: 50%
-		position: absolute
-		text-align: center
-		width: 100%
-		max-width: 865px
-		margin-left: -435px
-		overflow: hidden
-		transition: 2s
-	&.animated
-		.lose
-			&__img
-				height: 300px
-			&__title
-				opacity: 1
+  padding-top: 115px
+  padding-bottom: 115px
+  &__wrap
+    position: relative
+    min-height: 300px
+  &__img
+    width: 300px
+    height: 300px
+    transition: 2s
+    height: 0
+    overflow: hidden
+    &-wrap
+      width: 300px
+      height: 300px
+  &__title
+    opacity: 0
+    top: 115px
+    left: 50%
+    position: absolute
+    text-align: center
+    width: 100%
+    max-width: 865px
+    margin-left: -435px
+    overflow: hidden
+    transition: 2s
+  &.animated
+    .lose
+      &__img
+        height: 300px
+      &__title
+        opacity: 1
 
 .services
-	position: relative
-	border-bottom: 1px solid #E6E6E6
-	&.--other
-		display: none
-	&__list
-		position: relative
-		// overflow: hidden
-		
-		cursor: col-resize !important
-		*
-			cursor: col-resize !important
-	&__hidden
-		display: none
-	&__item
-		// background: #FFFFFF
-		border-top: 1px solid #E6E6E6
-	&__more-wrap
-		// z-index: 2
-		position: relative
-		display: flex
-		align-items: center
-		justify-content: center
-		padding-top: 105px
-		padding-bottom: 105px
-		&.--hidden
-			display: none
+  position: relative
+  border-bottom: 1px solid #E6E6E6
+  &.--other
+    display: none
+  &__list
+    position: relative
+    // overflow: hidden
+    
+    cursor: col-resize !important
+    *
+      cursor: col-resize !important
+  &__hidden
+    display: none
+  &__item
+    // background: #FFFFFF
+    border-top: 1px solid #E6E6E6
+  &__more-wrap
+    // z-index: 2
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 105px
+    padding-bottom: 105px
+    &.--hidden
+      display: none
 
 .service
-	z-index: 1
-	display: flex
-	align-items: center
-	min-height: 100vh
-	transition: none
-	// position: absolute
-	// top: 0
-	// left: 0
-	// right: 0
-	// bottom: 0
-	// transform: translateY(100%)
-	background-color: #fff
-	transition: .3s
-	&:nth-of-type(1)
-		opacity: 1
-		position: relative
-		// transform: translateY(0%)
-	&__bg
-		opacity: 0
-		z-index: 5
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		pointer-events: none
-		background: $black
-	&__inner
-		display: flex
-		align-items: center
-		width: 100%
-		height: 100%
-		// padding-top: 100px
-		// padding-bottom: 100px
-		transition: none
-			
-	&__wrap
-		display: flex
-		position: relative
-		&:before
-			z-index: 1
-			content: ''
-			position: absolute
-			top: 45px
-			left: 50%
-			width: 500px
-			height: 500px
-			border: 1px solid #E6E6E6
-			border-radius: 50%
-			cursor: col-resize !important
-			transform: translateX(-50%)
-	&__content
-		display: flex
-		flex-direction: column
-		z-index: 2
-		position: relative
-		width: 100%
-		padding-right: 20px
-	&__title
-		margin-bottom: 20px
-		&.--maxw
-			width: 100%
-			max-width: 300px
-	&__text
-		width: 100%
-		max-width: 300px
-		p
-			margin-bottom: 20px
-			&:last-of-type
-				margin-bottom: 0
-	&__img
-		width: 600px
-		min-width: 600px
-		height: 600px
-		img
-			filter: grayscale(100%)
-		&.--hidden
-			display: none
+  z-index: 1
+  display: flex
+  align-items: center
+  min-height: 100vh
+  transition: none
+  // position: absolute
+  // top: 0
+  // left: 0
+  // right: 0
+  // bottom: 0
+  // transform: translateY(100%)
+  background-color: #fff
+  transition: .3s
+  &:nth-of-type(1)
+    opacity: 1
+    position: relative
+    // transform: translateY(0%)
+  &__bg
+    opacity: 0
+    z-index: 5
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    pointer-events: none
+    background: $black
+  &__inner
+    display: flex
+    align-items: center
+    width: 100%
+    height: 100%
+    // padding-top: 100px
+    // padding-bottom: 100px
+    transition: none
+      
+  &__wrap
+    display: flex
+    position: relative
+    &:before
+      z-index: 1
+      content: ''
+      position: absolute
+      top: 45px
+      left: 50%
+      width: 500px
+      height: 500px
+      border: 1px solid #E6E6E6
+      border-radius: 50%
+      cursor: col-resize !important
+      transform: translateX(-50%)
+  &__content
+    display: flex
+    flex-direction: column
+    z-index: 2
+    position: relative
+    width: 100%
+    padding-right: 20px
+  &__title
+    margin-bottom: 20px
+    &.--maxw
+      width: 100%
+      max-width: 300px
+  &__text
+    width: 100%
+    max-width: 300px
+    p
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 0
+  &__img
+    width: 600px
+    min-width: 600px
+    height: 600px
+    img
+      filter: grayscale(100%)
+    &.--hidden
+      display: none
 
-	&__desc
-		max-width: 280px
-		margin-left: auto
-		&.--mt
-			margin-top: auto
+  &__desc
+    max-width: 280px
+    margin-left: auto
+    &.--mt
+      margin-top: auto
 
-	&.--reverse
-		.service
-			&__img
-				order: 1
-			&__content
-				order: 2
-				padding-right: 0
-				padding-left: 20px
-			&__title
-				text-align: right
-				margin-left: auto
-				&.--maxw
-					text-align: left
-			&__text
-				margin-left: auto
-			&__desc
-				margin-left: 0
-				
+  &.--reverse
+    .service
+      &__img
+        order: 1
+      &__content
+        order: 2
+        padding-right: 0
+        padding-left: 20px
+      &__title
+        text-align: right
+        margin-left: auto
+        &.--maxw
+          text-align: left
+      &__text
+        margin-left: auto
+      &__desc
+        margin-left: 0
+        
 
 .club-name
-	z-index: 3
-	position: relative
-	// overflow: hidden
-	padding-top: 80px
-	transition: 2s
-	&__title
-		color: $dark
-		white-space: nowrap
-		animation: inifiniteLine 10s infinite linear
-		min-width: 2335px
-		&:before, &:after
-			display: inline-block
-			vertical-align: middle
-			content: ''
-			width: 40px
-			height: 40px
-			border-radius: 50%
-			background-color: $dark
-			position: relative
-			top: -22px
-		&:before
-			margin-right: 20px
-		&:after
-			margin-left: 20px
+  z-index: 3
+  position: relative
+  // overflow: hidden
+  padding-top: 80px
+  transition: 2s
+  &__title
+    color: $dark
+    white-space: nowrap
+    animation: inifiniteLine 10s infinite linear
+    min-width: 2335px
+    &:before, &:after
+      display: inline-block
+      vertical-align: middle
+      content: ''
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: $dark
+      position: relative
+      top: -22px
+    &:before
+      margin-right: 20px
+    &:after
+      margin-left: 20px
 
 @keyframes inifiniteLine
-	0%
-		transform: translateX(110%)
-	100%
-		transform: translateX(-110%)
+  0%
+    transform: translateX(110%)
+  100%
+    transform: translateX(-110%)
 
 .invite
-	z-index: 4
-	position: relative
-	padding-top: 70px
-	&__wrap
-		display: flex
-		position: relative
-		&:before
-			position: absolute
-			content: ''
-			top: 160px
-			left: 0
-			width: 600px
-			height: 600px
-			border-radius: 50%
-			border: 1px solid #E6E6E6
-	&__content
-		z-index: 2
-		position: relative
-		width: 715px
-		margin-left: auto
-		margin-right: -255px
-	&__title
-		line-height: 1.2
-	&__text
-		max-width: 300px
-		margin-top: 40px
-	&__img
-		width: 600px
-		height: 750px
-		margin-top: 113px
+  z-index: 4
+  position: relative
+  padding-top: 70px
+  &__wrap
+    display: flex
+    position: relative
+    &:before
+      position: absolute
+      content: ''
+      top: 160px
+      left: 0
+      width: 600px
+      height: 600px
+      border-radius: 50%
+      border: 1px solid #E6E6E6
+  &__content
+    z-index: 2
+    position: relative
+    width: 715px
+    margin-left: auto
+    margin-right: -255px
+  &__title
+    line-height: 1.2
+  &__text
+    max-width: 300px
+    margin-top: 40px
+  &__img
+    width: 600px
+    height: 750px
+    margin-top: 113px
 
 .about
-	padding-top: 100px
-	padding-bottom: 200px
-	&__title
-		margin-bottom: 192px
-	&__list
-		display: flex
-	&__item
-		position: relative
-		display: flex
-		align-items: center
-		justify-content: center
-		width: 600px
-		height: 600px
-		border: 1px solid #000
-		border-radius: 50%
-		&:nth-of-type(1)
-			margin-right: -80px
-			.about
-				&__shape
-					svg
-						animation: rotateRight 8s infinite linear
-		&:nth-of-type(2)
-			.about
-				&__shape
-					transform: translate(-50%, -50%) rotate(220deg)
-					svg
-						animation: rotateRight 8s 1s infinite linear
-	&__text
-		width: 100%
-		line-height: 1.2
-		max-width: 340px
-		text-align: center
-	&__shape
-		z-index: 3
-		position: absolute
-		left: 50%
-		top: 50%
-		width: 480px
-		height: 480px
-		font-size: 24px
-		font-family: $ff2
-		letter-spacing: 3px
-		// transform: translate(-50%, -50%) rotate(100deg)
-		transform: translate(-50%, -50%) rotate(0deg)
-		svg
-			width: 100%
-			height: 100%
-			path
-				stroke: none
-		&:before
-			content: ''
-			position: absolute
-			top: 50%
-			left: 50%
-			width: 420px
-			height: 420px
-			border-radius: 50%
-			border: 1px solid #E6E6E6
-			transform: translate(-50%, -50%)
-		
+  padding-top: 100px
+  padding-bottom: 200px
+  &__title
+    margin-bottom: 192px
+  &__list
+    display: flex
+  &__item
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 600px
+    height: 600px
+    border: 1px solid #000
+    border-radius: 50%
+    &:nth-of-type(1)
+      margin-right: -80px
+      .about
+        &__shape
+          svg
+            animation: rotateRight 8s infinite linear
+    &:nth-of-type(2)
+      .about
+        &__shape
+          transform: translate(-50%, -50%) rotate(220deg)
+          svg
+            animation: rotateRight 8s 1s infinite linear
+  &__text
+    width: 100%
+    line-height: 1.2
+    max-width: 340px
+    text-align: center
+  &__shape
+    z-index: 3
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 480px
+    height: 480px
+    font-size: 24px
+    font-family: $ff2
+    letter-spacing: 3px
+    // transform: translate(-50%, -50%) rotate(100deg)
+    transform: translate(-50%, -50%) rotate(0deg)
+    svg
+      width: 100%
+      height: 100%
+      path
+        stroke: none
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 420px
+      height: 420px
+      border-radius: 50%
+      border: 1px solid #E6E6E6
+      transform: translate(-50%, -50%)
+    
 
 .thanks
-	padding-top: 50px
-	padding-bottom: 100px
-	text-align: center
-	&__inner
-		display: flex
-		align-items: center
-		flex-direction: column
-	&__desc, &__title, &__text-top, &__text-bot
-		z-index: 1
-		position: relative
-		
-	&__desc
-		margin-bottom: 20px
-	&__title
-		font-size: 48px
-		line-height: 1.23
-		margin-bottom: 40px
-	&__btn
-		margin-top: 95px
-		margin-bottom: 95px
-		&:before
-			content: ''
-			position: absolute
-			top: 50%
-			left: 50%
-			width: 750px
-			height: 750px
-			border-radius: 50%
-			transform: translate(-50%, -50%)
-			border: 1px solid #E6E6E6
+  padding-top: 50px
+  padding-bottom: 100px
+  text-align: center
+  &__inner
+    display: flex
+    align-items: center
+    flex-direction: column
+  &__desc, &__title, &__text-top, &__text-bot
+    z-index: 1
+    position: relative
+    
+  &__desc
+    margin-bottom: 20px
+  &__title
+    font-size: 48px
+    line-height: 1.23
+    margin-bottom: 40px
+  &__btn
+    margin-top: 95px
+    margin-bottom: 95px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 750px
+      height: 750px
+      border-radius: 50%
+      transform: translate(-50%, -50%)
+      border: 1px solid #E6E6E6
 
-	&__text-top
-		max-width: 415px
-	&__text-bot
-		max-width: 330px
-		
+  &__text-top
+    max-width: 415px
+  &__text-bot
+    max-width: 330px
+    
+
+
+.page
+  &-head
+    padding-top: 100px
+    padding-bottom: 60px
+    &__title
+      font-size: 114px
+      line-height: 1.1
+      font-family: $ff2
+
+  &-img
+    height: 450px
+    margin-bottom: 150px
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+  &-text
+    padding-bottom: 200px
+
+.pc
+  &__block
+    width: 100%
+    max-width: 790px
+    margin-left: auto
+    margin-bottom: 150px
+    &:last-of-type
+      margin-bottom: 0
+    h2
+      display: block
+      font-size: 46px
+      line-height: 64.5px
+      font-family: $ff2
+      text-transform: uppercase
+      margin-bottom: 60px
+    h3
+      display: block
+      font-size: 30px
+      line-height: 36px
+      margin-top: 60px
+      margin-bottom: 40px
+      &:last-child
+        margin-bottom: 0
+    blockquote
+      border-left: 1px solid rgba(18,18,18,0.3)
+      padding-left: 40px
+      margin-bottom: 60px
+      &:last-child
+        margin-bottom: 0
+      p
+        color: rgba(18,18,18,0.6)
+      li
+        opacity: 0.6
+    p
+      font-size: 18px
+      line-height: 21px
+    ul
+      flex-direction: column
+    li
+      position: relative
+      padding-left: 26px
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 3px
+      &:last-of-type
+        margin-bottom: 0px
+      &:before
+        position: absolute
+        top: 5px
+        left: 0
+        content: ''
+        width: 6px
+        height: 6px
+        border-radius: 6px
+        background: #121212
+    a
+      border-color: $black
+      text-transform: uppercase
+      font-weight: 500
+      &:hover
+        border-color: transparent
+
+  &__video
+    position: relative
+    display: block
+    width: 100%
+    max-width: 1200px
+    height: 600px
+    margin-top: -30px
+    margin-bottom: 150px
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &:before
+      width: 108px
+      height: 108px
+      border: 1px solid #fff
+      border-radius: 50%
+    &:after
+      margin-left: 2px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 12px 0 12px 20px
+      border-color: transparent transparent transparent #ffffff
+    &:hover
+      &:before, &:after
+        transform: translate(-50%, -50%) scale(0.9)
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+.pc-links
+  display: flex
+  flex-wrap: wrap
+  a
+    margin-right: 60px
+    &:last-of-type
+      margin-right: 0
+
+
+.modal
+  display: none
+  background: #fff
+  &.--sm
+    padding: 35px 40px
+    width: 100%
+    max-width: 380px
+
+  &__title
+    font-size: 24px
+    font-family: $ff2
+    line-height: 1.2
+    text-align: center
+    margin-bottom: 25px
+  &__field
+    margin-bottom: 12px
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 18px
+    font-family: $ff2
+    text-align: center
+    height: 56px
+    color: #fff
+    background: $black
+    margin-top: 20px
+    width: 100%
+    &:hover
+      background: lighten($black, 10%)
+
+.field
+  &__area
+    display: block
+    width: 100%
+    font-size: 18px
+    font-family: $ff1
+    height: 40px
+    cursor: text
+    border-bottom: 1px solid rgba(18,18,18,0.3)
 
 .footer
-	color: #fff
-	// background: #121212
-	overflow: hidden
-	// cursor: default
-	&.--pt
-		background: #fff
-		padding-top: 70px
-		margin-top: auto
-		color: $black
-		a
-			color: $black
-			&:hover
-				color: lighten($black, 10%)
-		.footer
-			&__bot-wrap
-				border-color: $black
-	*
-		transition: .1s
-	a
-		color: #fff
-		transition: 1s
-	&__body
-		align-items: flex-start
-		padding-bottom: 64px
-	&__logo
-		.logo
-			&__text
-				// padding-top: 0
-				path
-					// transition: 1s
-	&__inner
-		display: flex
-		justify-content: space-between
-		width: 600px
-		margin-left: auto
+  color: #fff
+  // background: #121212
+  overflow: hidden
+  // cursor: default
+  &.--pt
+    background: #fff
+    padding-top: 70px
+    margin-top: auto
+    color: $black
+    a
+      color: $black
+      &:hover
+        color: lighten($black, 10%)
+    .footer
+      &__bot-wrap
+        border-color: $black
+  &.--black
+    padding-top: 70px
+    background: #212121
 
-	&__col
-		max-width: 180px
+  *
+    transition: .1s
+  a
+    color: #fff
+    transition: 1s
+  &__body
+    align-items: flex-start
+    padding-bottom: 64px
+  &__logo
+    .logo
+      &__text
+        // padding-top: 0
+        path
+          // transition: 1s
+  &__inner
+    display: flex
+    justify-content: space-between
+    width: 600px
+    margin-left: auto
 
-	&__title
-		line-height: 20px
-		font-family: $ff2
-		font-weight: 500
-		text-transform: capitalize
-		margin-bottom: 37px
-		&:before
-			content: ''
-			display: inline-block
-			vertical-align: middle
-			width: 32px
-			height: 1px
-			background-color: #fff
-			margin-right: 17px
-	&__text
-		line-height: 14px
-		p
-			margin-bottom: 20px
-			&:last-of-type
-				margin-bottom: 0
+  &__col
+    max-width: 180px
+
+  &__title
+    line-height: 20px
+    font-family: $ff2
+    font-weight: 500
+    text-transform: capitalize
+    margin-bottom: 37px
+    &:before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 32px
+      height: 1px
+      background-color: #fff
+      margin-right: 17px
+  &__text
+    line-height: 14px
+    p
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 0
 
 
-	&__bot-wrap
-		border-top: 1px solid #fff
+  &__bot-wrap
+    border-top: 1px solid #fff
 
-	&__bot
-		display: flex
-		padding-top: 19px
-		padding-bottom: 22px
-		text-transform: capitalize
+  &__bot
+    display: flex
+    padding-top: 19px
+    padding-bottom: 22px
+    text-transform: capitalize
 
-	&__links
-		width: 600px
-		margin-left: auto
-		ul
-			justify-content: space-between
-		a
-			&:hover
-				opacity: 0.5
-				transition: .3s
-		&.--hidden
-			display: none
+  &__links
+    width: 600px
+    margin-left: auto
+    ul
+      justify-content: space-between
+    a
+      &:hover
+        opacity: 0.5
+        transition: .3s
+    &.--hidden
+      display: none
 .win
-	position: relative
-	// border-top: 1px solid #E6E6E6
-	&__wrap
-		display: flex
-		align-items: center
-		flex-direction: column
-		padding-top: 220px
-		padding-bottom: 295px
-	&__title
-		z-index: 2
-		position: relative
-		line-height: 1.2
-		text-align: center
-		margin-bottom: 40px
-	&__text
-		z-index: 2
-		position: relative
-		text-align: center
-		max-width: 600px
-		margin-bottom: 115px
-	&__shape
-		position: absolute
-		border-radius: 50%
-		transition: 1s
-		&:before
-			content: ''
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			position: absolute
-			border-radius: 50%
-			border: 1px solid #2B2B2B
-		&:nth-of-type(1)
-			top: 71px
-			left: -675px
-			// width: 1800px
-			// height: 1800px
-			width: 1175px
-			height: 1175px
-			// animation: 8s rotateRight infinite linear
-			&:before
-				// width: 1175px
-				// height: 1175px
-		&:nth-of-type(2)
-			top: 225px
-			right: -108px
-			// width: 1300px
-			// height: 1300px
-			width: 700px
-			height: 700px
-			// animation: 8s rotateLeft infinite linear
-			&:before
-				// width: 700px
-				// height: 700px
+  position: relative
+  // border-top: 1px solid #E6E6E6
+  &__wrap
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding-top: 220px
+    padding-bottom: 295px
+  &__title
+    z-index: 2
+    position: relative
+    line-height: 1.2
+    text-align: center
+    margin-bottom: 40px
+  &__text
+    z-index: 2
+    position: relative
+    text-align: center
+    max-width: 600px
+    margin-bottom: 115px
+  &__shape
+    position: absolute
+    border-radius: 50%
+    transition: 1s
+    &:before
+      content: ''
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      position: absolute
+      border-radius: 50%
+      border: 1px solid #2B2B2B
+    &:nth-of-type(1)
+      top: 71px
+      left: -675px
+      // width: 1800px
+      // height: 1800px
+      width: 1175px
+      height: 1175px
+      // animation: 8s rotateRight infinite linear
+      &:before
+        // width: 1175px
+        // height: 1175px
+    &:nth-of-type(2)
+      top: 225px
+      right: -108px
+      // width: 1300px
+      // height: 1300px
+      width: 700px
+      height: 700px
+      // animation: 8s rotateLeft infinite linear
+      &:before
+        // width: 700px
+        // height: 700px
 
 
 @keyframes rotateRight
-	from
-		transform: rotate(0deg)
-	to
-		transform: rotate(360deg)
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
 @keyframes rotateLeft
-	from
-		transform: rotate(0deg)
-	to
-		transform: rotate(-360deg)
-	// 50%
-	// 	transform: rotate(180deg)
-	// 75%
-	// 	transform: translate(0, 20%)
-	// 100%
-	// 	transform: translate(0, 0)
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(-360deg)
+  // 50%
+  //  transform: rotate(180deg)
+  // 75%
+  //  transform: translate(0, 20%)
+  // 100%
+  //  transform: translate(0, 0)
 
 .colors-reverse
-	.footer
-		color: $black
-		a
-			color: $black
-		&__logo
-			.logo
-				&__icon
-					path
-						fill: $black
-						transition: 1s
-		&__bot-wrap
-			border-color: #E6E6E6
-		&__title
-			&:before
-				background-color: $black
-	// color: #fff
-	// .services
-	// 	&__more-wrap
-	// 		transition: .3s
-	// 		border-color: #2B2B2B
-	// .service
-	// 	transition: .3s
-	// 	border-color: #2B2B2B
-	// 	&__wrap
-	// 		&:before
-	// 			transition: .3s
-	// 			border-color: #2B2B2B
-	// .club-name
-	// 	&__title
-	// 		color: #fff
-	// 		&:before, &:after
-	// 			background-color: #fff
+  .footer
+    color: $black
+    a
+      color: $black
+    &__logo
+      .logo
+        &__icon
+          path
+            fill: $black
+            transition: 1s
+    &__bot-wrap
+      border-color: #E6E6E6
+    &__title
+      &:before
+        background-color: $black
+  // color: #fff
+  // .services
+  //  &__more-wrap
+  //    transition: .3s
+  //    border-color: #2B2B2B
+  // .service
+  //  transition: .3s
+  //  border-color: #2B2B2B
+  //  &__wrap
+  //    &:before
+  //      transition: .3s
+  //      border-color: #2B2B2B
+  // .club-name
+  //  &__title
+  //    color: #fff
+  //    &:before, &:after
+  //      background-color: #fff
 
-	.win
-		&__shape
-			// transition: .3s
-			border-color: #E6E6E6
+  .win
+    &__shape
+      // transition: .3s
+      border-color: #E6E6E6

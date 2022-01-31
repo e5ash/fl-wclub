@@ -1,0 +1,48 @@
+extends ../../templates/default
+block vars
+  -
+    title = "Партнерская программа"
+    breadcrumbs = [
+      ['Главная', 'index.html'],
+      [title]
+    ]
+block content
+  body.load-prelouder.loaded
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    .wrap.--page
+      +style('header', 'blocks')
+      include ../../../blocks/header/header
+      main.main
+        .inner
+          .page-head
+            .case
+              .page-head__title Партнерская программа
+          .page-img
+            img(src="uploads/towers.jpg")
+          .page-text
+            .case
+              .page-content.pc
+                .pc__block
+                  h2 Почему наша партнерская программа позволит Вам заработать намного больше других программ?
+                  h3 Мы предлагаем 5-ти уровневые выплаты.
+                  blockquote
+                    p Как это работает смотрите в видео 
+                a.pc__video(href="https://www.youtube.com/watch?v=DYeFcPFuiWY" data-fancybox="")
+                  img(src="uploads/video.jpg" alt="")
+                .pc__block
+                  h2 Давайте добиваться успеха вместе!
+                  p.pc-links
+                    a(href="#modal-order" data-fancybox="") Стать партнером
+                    a(href="uploads/presentation.pdf" target="_blank") Скачать презентацию
+
+      - footerBlack = true
+      +style('footer', 'blocks')
+      include ../../../blocks/footer/footer
+
+      
+      script(src="template/js/common.js" + version)
+      <script type="text/javascript">var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.async=true;s1.src='https://embed.tawk.to/61486382d326717cb6825eeb/1fg1c9dks';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();</script>
+      <script language="javascript" src= "https://infinityvip.e-autopay.com/hit.js"></script>
+      <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+      <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=145bea8a5921ab8790cf09fab6f7277e" charset="UTF-8" async></script>

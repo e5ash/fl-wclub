@@ -2,16 +2,17 @@ include ../vars
 doctype html
 block vars
 html(lang="ru")
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		title=title
-		style.
-			body {
-				opacity: 0
-			}
-		link(rel="stylesheet" href="template/css/style.css" + version)
-		link(rel="stylesheet" href="template/css/responsive.css" + version)
-		<link rel="icon" type="image/svg+xml" href="uploads/logo-icon.svg">
-		<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6QQ5RM');</script><!-- End Google Tag Manager -->
-	block content
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title=title
+    style.
+      body {
+        opacity: 0
+      }
+    link(rel="stylesheet" href="template/css/style.css" + version)
+    link(rel="stylesheet" href="template/css/responsive.css" + version)
+    <link rel="icon" type="image/svg+xml" href="uploads/logo-icon.svg">
+    <!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P6QQ5RM');</script><!-- End Google Tag Manager -->
+    <script src="https://unpkg.com/imask"></script>
+  block content

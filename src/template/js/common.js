@@ -80,4 +80,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			lose.classList.add('animated');
 		}
 	}, 7200);
+
+  let fields = document.querySelectorAll('.field');
+  if (fields) {
+    fields.forEach((field)=>{
+      field.area = field.querySelector('.field__area');
+
+      if (field.classList.contains('--phone')) {
+        IMask(field.area, {
+          mask: '+{7} (000) 000-00-00'
+        })
+      }
+    });
+  }
 });
