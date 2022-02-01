@@ -8,9 +8,7 @@ block vars
     ]
 block content
   body.load-prelouder.loaded
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    .wrap.--page
+    .wrap
       +style('header', 'blocks')
       include ../../../blocks/header/header
       main.main
@@ -33,8 +31,8 @@ block content
                 .pc__block
                   h2 Давайте добиваться успеха вместе!
                   p.pc-links
-                    a(href="#modal-order" data-fancybox="") Стать партнером
-                    a(href="uploads/presentation.pdf" target="_blank") Скачать презентацию
+                    a(href="https://infinityvip.e-autopay.com/affreg" target="_blank") Стать партнером
+                    a(href="uploads/partnership.pdf" target="_blank") Скачать презентацию
 
       - footerBlack = true
       +style('footer', 'blocks')

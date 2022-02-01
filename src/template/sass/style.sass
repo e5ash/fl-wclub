@@ -158,7 +158,13 @@
   &.--hidden
     opacity: 0
 
+body
+  transition: none
+
+.fancybox__container, .fancybox__container * 
+  transition: none
 .wrap
+  z-index: 1
   overflow: hidden
 
 .btn
@@ -981,6 +987,20 @@ u
         // padding-top: 0
         path
           // transition: 1s
+  &__nav
+    margin-top: 35px
+    ul
+      flex-direction: column
+    li
+      margin-bottom: 12px
+      &:last-of-type
+        margin-bottom: 0
+    a
+      opacity: 0.6
+      &:hover
+        opacity: 1
+        border-color: rgba(255,255,255,0.4)
+      
   &__inner
     display: flex
     justify-content: space-between

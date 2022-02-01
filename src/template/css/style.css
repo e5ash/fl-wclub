@@ -391,7 +391,16 @@ img, svg, path, circle, rect, line {
   opacity: 0;
 }
 
+body {
+  transition: none;
+}
+
+.fancybox__container, .fancybox__container * {
+  transition: none;
+}
+
 .wrap {
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -1303,6 +1312,25 @@ u {
 .footer__body {
   align-items: flex-start;
   padding-bottom: 64px;
+}
+.footer__nav {
+  margin-top: 35px;
+}
+.footer__nav ul {
+  flex-direction: column;
+}
+.footer__nav li {
+  margin-bottom: 12px;
+}
+.footer__nav li:last-of-type {
+  margin-bottom: 0;
+}
+.footer__nav a {
+  opacity: 0.6;
+}
+.footer__nav a:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 .footer__inner {
   display: flex;

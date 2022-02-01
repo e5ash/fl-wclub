@@ -1,5 +1,10 @@
 let wrap = document.querySelector('.wrap');
 
+Fancybox.bind("[data-fancybox]", {
+  dragToClose: false,
+  autoFocus: false,
+});
+
 document.addEventListener('DOMContentLoaded', ()=>{
 	window.scrollTo(0, 0);
 	
@@ -64,10 +69,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		body.classList.add('load-prelouder');
 	}, 500);
 	
-	setTimeout(()=>{
-		window.scrollTo(0, 0);
-		body.classList.add('loaded');
-	}, 4000);
+  if (!document.body.classList.contains('loaded')) {
+    setTimeout(()=>{
+      window.scrollTo(0, 0);
+      body.classList.add('loaded');
+    }, 4000);
+  }
 
 	setTimeout(()=>{
 		if (intro) {
@@ -85,12 +92,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if (fields) {
     fields.forEach((field)=>{
       field.area = field.querySelector('.field__area');
-
-      if (field.classList.contains('--phone')) {
-        IMask(field.area, {
-          mask: '+{7} (000) 000-00-00'
-        })
-      }
     });
   }
 });
